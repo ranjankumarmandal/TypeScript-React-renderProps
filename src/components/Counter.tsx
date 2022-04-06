@@ -10,7 +10,11 @@ interface Props {
 const Counter = (props: Props) => {
   const [count, setCount] = useState(0);
 
-  return <div>{props.render(count, setCount)}</div>;
+  const increamentCounter = () => {
+    setCount(count + 1);
+  };
+
+  return <div>{props.render(count, increamentCounter)}</div>;
 };
 
 export default Counter;
