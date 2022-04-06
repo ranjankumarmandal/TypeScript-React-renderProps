@@ -1,14 +1,16 @@
 import React from 'react';
 
-interface Props {
+export interface Props {
   count: number;
-  incrementCounter: () => void;
+  increamentCounter: () => void;
 }
 
 const ClickCounter = (props: Props) => {
   return (
     <>
-      <button onClick={props.incrementCounter}>Increment: {props.count}</button>
+      <button onClick={props.increamentCounter}>
+        Click Increment: {props.count}
+      </button>
     </>
   );
 };
