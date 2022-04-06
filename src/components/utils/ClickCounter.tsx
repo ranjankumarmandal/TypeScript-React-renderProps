@@ -1,7 +1,16 @@
 import React from 'react';
 
-const ClickCounter = () => {
-  return <div>ClickCounter</div>;
+interface Props {
+  count: number;
+  incrementCounter: () => void;
+}
+
+const ClickCounter = (props: Props) => {
+  return (
+    <>
+      <button onClick={props.incrementCounter}>Increment: {props.count}</button>
+    </>
+  );
 };
 
 export default ClickCounter;

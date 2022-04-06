@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 
 interface Props {
-  render: (
-    count: number,
-    setCount: React.Dispatch<React.SetStateAction<number>>
-  ) => JSX.Element;
+  render: (count: number, incrementCounter: () => void) => JSX.Element;
 }
 
 const Counter = (props: Props) => {
