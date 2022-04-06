@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Counter = () => {
+interface Props {
+  render: () => JSX.Element;
+}
+
+const Counter = (props: Props) => {
   return (
     <div>
       <p>counter</p>
